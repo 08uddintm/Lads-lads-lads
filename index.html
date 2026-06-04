@@ -6,221 +6,189 @@
   <title>Lads Holiday Selector</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root, [data-theme="light"] {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
-      --color-bg: #f7f4ef;
-      --color-surface: #fbf8f2;
+      --text-sm: clamp(0.875rem, 0.8rem + 0.25vw, 1rem);
+      --text-base: clamp(1rem, 0.96rem + 0.22vw, 1.1rem);
+      --text-lg: clamp(1.125rem, 1.02rem + 0.6vw, 1.4rem);
+      --text-xl: clamp(1.6rem, 1.3rem + 1vw, 2.3rem);
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+      --color-bg: #fff2fa;
+      --color-surface: #fff8fd;
       --color-surface-2: #ffffff;
-      --color-surface-offset: #efe8df;
-      --color-border: rgba(34, 31, 28, 0.12);
-      --color-divider: rgba(34, 31, 28, 0.08);
-      --color-text: #1f1b18;
-      --color-text-muted: #666059;
-      --color-text-faint: #968f87;
-      --color-primary: #0b6b74;
-      --color-primary-hover: #084d53;
-      --color-primary-highlight: #d6e7e6;
-      --color-accent: #c88b2f;
-      --color-success: #2f7d54;
-      --color-danger: #943f3f;
-      --radius-sm: 0.5rem; --radius-md: 0.85rem; --radius-lg: 1.2rem; --radius-xl: 1.6rem; --radius-full: 9999px;
-      --shadow-sm: 0 2px 8px rgba(21, 16, 12, 0.06);
-      --shadow-md: 0 12px 30px rgba(21, 16, 12, 0.10);
-      --shadow-lg: 0 18px 60px rgba(21, 16, 12, 0.16);
-      --font-body: 'Manrope', sans-serif;
-      --font-display: 'Manrope', sans-serif;
-      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --color-surface-alt: #ffe9f6;
+      --color-border: rgba(103, 52, 88, 0.12);
+      --color-divider: rgba(103, 52, 88, 0.08);
+      --color-text: #3f2137;
+      --color-text-muted: #7b5f72;
+      --color-text-faint: #a18797;
+      --color-primary: #d45aa6;
+      --color-primary-hover: #b03c81;
+      --color-primary-soft: #ffe0f0;
+      --color-accent: #f2b5d4;
+      --radius-sm: .5rem; --radius-md: .9rem; --radius-lg: 1.2rem; --radius-xl: 1.5rem; --radius-full: 999px;
+      --shadow-sm: 0 1px 3px rgba(16,12,10,0.06);
+      --shadow-md: 0 10px 28px rgba(16,12,10,0.10);
+      --shadow-lg: 0 24px 60px rgba(16,12,10,0.15);
+      --font-body: 'Inter', sans-serif;
+      --transition: 180ms cubic-bezier(0.16,1,0.3,1);
     }
     [data-theme="dark"] {
-      --color-bg: #13110f;
-      --color-surface: #1a1714;
-      --color-surface-2: #201c18;
-      --color-surface-offset: #26211c;
-      --color-border: rgba(242, 235, 226, 0.10);
-      --color-divider: rgba(242, 235, 226, 0.06);
-      --color-text: #f2ebe2;
-      --color-text-muted: #b7afa5;
-      --color-text-faint: #7c746c;
-      --color-primary: #61aab1;
-      --color-primary-hover: #7bc0c7;
-      --color-primary-highlight: #203336;
-      --color-accent: #e0a84e;
-      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.20);
-      --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.28);
-      --shadow-lg: 0 18px 60px rgba(0, 0, 0, 0.42);
+      --color-bg: #1e1020;
+      --color-surface: #2a162a;
+      --color-surface-2: #321c32;
+      --color-surface-alt: #3d2240;
+      --color-border: rgba(255, 220, 240, 0.12);
+      --color-divider: rgba(255, 220, 240, 0.08);
+      --color-text: #ffe9f5;
+      --color-text-muted: #d7b8ca;
+      --color-text-faint: #ad8a9e;
+      --color-primary: #ff88c9;
+      --color-primary-hover: #ffb0dc;
+      --color-primary-soft: #4e2a4c;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.24);
+      --shadow-md: 0 10px 28px rgba(0,0,0,0.32);
+      --shadow-lg: 0 24px 60px rgba(0,0,0,0.44);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
     body {
       min-height: 100dvh;
       font-family: var(--font-body);
       font-size: var(--text-base);
       color: var(--color-text);
-      background:
-        radial-gradient(circle at top right, rgba(200,139,47,0.14), transparent 24%),
-        radial-gradient(circle at left 20%, rgba(11,107,116,0.10), transparent 26%),
-        var(--color-bg);
-      line-height: 1.55;
+      background: radial-gradient(circle at top right, rgba(255,161,212,.22), transparent 24%), radial-gradient(circle at left 15%, rgba(212,90,166,.15), transparent 28%), linear-gradient(180deg, #fff6fc 0%, var(--color-bg) 100%);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
-    img, svg { display: block; max-width: 100%; }
-    button, input, textarea, select { font: inherit; }
-    button { cursor: pointer; border: none; }
-    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button { border: none; cursor: pointer; }
     :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
-    .app {
-      width: min(1280px, calc(100% - 2rem));
-      margin: 0 auto;
-      padding: var(--space-6) 0 var(--space-10);
-    }
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
-      margin-bottom: var(--space-8);
-    }
-    .brand { display: flex; align-items: center; gap: var(--space-3); }
+    .app { width: min(1180px, calc(100% - 24px)); margin: 0 auto; padding: 24px 0 40px; }
+    .topbar, .hero-grid, .content-grid, .section-head, .destination-head, .inline-actions { display: flex; gap: var(--space-4); }
+    .topbar, .section-head, .destination-head { align-items: center; justify-content: space-between; }
+    .topbar { margin-bottom: var(--space-6); }
+    .brand { display: flex; gap: var(--space-3); align-items: center; }
     .logo {
-      width: 42px; height: 42px; border-radius: 14px; background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-      display: grid; place-items: center; color: white; box-shadow: var(--shadow-md);
+      width: 44px; height: 44px; display: grid; place-items: center; border-radius: 14px; color: white;
+      background: linear-gradient(135deg, #ff84c2, #f2b5d4); box-shadow: var(--shadow-md);
     }
-    .brand-copy h1 { font-size: var(--text-lg); line-height: 1.05; font-weight: 800; }
-    .brand-copy p { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); }
-    .toolbar { display: flex; gap: var(--space-3); flex-wrap: wrap; }
-    .ghost-btn, .primary-btn, .secondary-btn {
-      min-height: 44px; padding: 0 var(--space-4); border-radius: var(--radius-full); transition: all var(--transition-interactive);
-      display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); font-size: var(--text-sm); font-weight: 700;
-    }
-    .ghost-btn { background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); }
-    .ghost-btn:hover { background: var(--color-surface-2); }
-    .primary-btn { background: var(--color-primary); color: white; box-shadow: var(--shadow-sm); }
-    .primary-btn:hover { background: var(--color-primary-hover); }
-    .secondary-btn { background: var(--color-primary-highlight); color: var(--color-primary-hover); }
-    .secondary-btn:hover { filter: brightness(0.98); }
-    .hero {
-      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-6);
-      margin-bottom: var(--space-8);
-    }
+    .brand h1 { font-size: var(--text-lg); font-weight: 800; line-height: 1.05; }
+    .brand p { color: var(--color-text-muted); font-size: var(--text-xs); margin-top: 4px; }
     .panel {
-      background: color-mix(in srgb, var(--color-surface) 85%, transparent);
+      background: color-mix(in srgb, var(--color-surface) 88%, transparent);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow-md);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(12px);
     }
-    .hero-copy { padding: var(--space-8); }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: var(--space-5); margin-bottom: var(--space-6); }
+    .hero-copy, .summary-card, .section { padding: var(--space-6); }
     .eyebrow {
-      display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3);
-      border-radius: var(--radius-full); background: var(--color-primary-highlight); color: var(--color-primary-hover); font-size: var(--text-xs); font-weight: 800;
-      letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--space-4);
+      display: inline-flex; align-items: center; padding: 8px 12px; border-radius: var(--radius-full); background: var(--color-primary-soft);
+      color: var(--color-primary-hover); font-size: var(--text-xs); font-weight: 800; letter-spacing: .04em; text-transform: uppercase; margin-bottom: var(--space-4);
     }
-    .hero-copy h2 { font-size: var(--text-xl); line-height: 1.02; max-width: 12ch; margin-bottom: var(--space-4); }
-    .hero-copy p { color: var(--color-text-muted); max-width: 60ch; }
-    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-top: var(--space-6); }
-    .stat {
-      padding: var(--space-4); border-radius: var(--radius-lg); background: var(--color-surface-2); border: 1px solid var(--color-divider);
+    .hero-copy h2 { font-size: var(--text-xl); line-height: 1.02; max-width: 13ch; margin-bottom: var(--space-3); }
+    .hero-copy > p { max-width: 62ch; color: var(--color-text-muted); margin-bottom: var(--space-5); }
+    .steps { display: grid; gap: 12px; }
+    .step {
+      display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 14px 16px; border-radius: var(--radius-lg); background: var(--color-surface-2); border: 1px solid var(--color-divider);
     }
-    .stat strong { display: block; font-size: var(--text-lg); font-variant-numeric: tabular-nums lining-nums; }
+    .step-num {
+      width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; font-size: var(--text-sm); font-weight: 800;
+      background: var(--color-primary-soft); color: var(--color-primary-hover);
+    }
+    .step strong { display: block; font-size: var(--text-sm); margin-bottom: 3px; }
+    .step p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: none; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: var(--space-5); }
+    .stat, .summary-item, .metric, .reminder-card, .preview-shell {
+      background: var(--color-surface-2); border: 1px solid var(--color-divider); border-radius: var(--radius-lg);
+    }
+    .stat { padding: 14px; }
+    .stat strong { display: block; font-size: var(--text-lg); }
     .stat span { font-size: var(--text-xs); color: var(--color-text-muted); }
-    .summary-card { padding: var(--space-8); display: flex; flex-direction: column; justify-content: space-between; }
-    .summary-card h3 { font-size: var(--text-lg); margin-bottom: var(--space-4); }
-    .summary-list { display: grid; gap: var(--space-3); margin-bottom: var(--space-6); }
-    .summary-item {
-      padding: var(--space-4); border-radius: var(--radius-lg); background: var(--color-surface-2); border: 1px solid var(--color-divider);
-    }
-    .summary-item small { display: block; color: var(--color-text-faint); font-size: var(--text-xs); margin-bottom: var(--space-1); text-transform: uppercase; letter-spacing: 0.04em; }
-    .summary-item strong { display: block; font-size: var(--text-base); }
-    .layout { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: var(--space-6); align-items: start; }
-    .section { padding: var(--space-6); }
-    .section-head { display: flex; justify-content: space-between; gap: var(--space-3); align-items: end; margin-bottom: var(--space-5); }
-    .section-head h3 { font-size: var(--text-lg); }
-    .section-head p { color: var(--color-text-muted); font-size: var(--text-sm); max-width: 50ch; }
-    .destinations { display: grid; gap: var(--space-4); }
+    .summary-card h3, .section-head h3 { font-size: var(--text-lg); }
+    .summary-card > p { color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-4); }
+    .summary-list { display: grid; gap: 12px; margin-top: var(--space-4); }
+    .summary-item { padding: 14px 16px; }
+    .summary-item small { display: block; color: var(--color-text-faint); font-size: var(--text-xs); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .04em; }
+    .summary-item strong { font-size: var(--text-base); }
+    .content-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--space-5); align-items: start; }
+    .section-head { margin-bottom: var(--space-5); align-items: end; }
+    .section-head p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 60ch; }
+    .destinations, .sidebar-stack, .form-grid { display: grid; gap: 16px; }
     .destination-card {
-      border: 1px solid var(--color-border); background: var(--color-surface-2); border-radius: var(--radius-xl); padding: var(--space-5);
-      display: grid; gap: var(--space-4);
+      background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: 20px;
+      display: grid; gap: 16px;
     }
-    .destination-top { display: flex; justify-content: space-between; gap: var(--space-4); align-items: start; }
-    .destination-title h4 { font-size: var(--text-lg); margin-bottom: var(--space-1); }
-    .destination-title p { color: var(--color-text-muted); font-size: var(--text-sm); max-width: 52ch; }
-    .badge-row, .mini-badges { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-    .badge, .mini-badge {
-      display: inline-flex; align-items: center; min-height: 28px; padding: 0 var(--space-3); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 800;
-      letter-spacing: 0.02em;
+    .destination-title h4 { font-size: var(--text-lg); margin-bottom: 4px; }
+    .destination-title p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 56ch; }
+    .badge-row, .tag-row, .pill-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge, .tag {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 800;
     }
-    .badge { background: var(--color-primary-highlight); color: var(--color-primary-hover); }
-    .mini-badge { background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface-2)); color: #8a5c16; }
-    .destination-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
-    .metric {
-      padding: var(--space-4); border-radius: var(--radius-lg); background: var(--color-bg); border: 1px solid var(--color-divider);
-    }
-    .metric small { display: block; color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.04em; font-size: var(--text-xs); margin-bottom: var(--space-1); }
-    .metric strong { display: block; font-size: var(--text-base); font-variant-numeric: tabular-nums lining-nums; }
-    .destination-notes { color: var(--color-text-muted); font-size: var(--text-sm); }
-    .form-grid { display: grid; gap: var(--space-4); }
-    .field { display: grid; gap: var(--space-2); }
+    .badge { background: var(--color-primary-soft); color: var(--color-primary-hover); }
+    .tag { background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface-2)); color: #885a18; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .metric { padding: 14px; }
+    .metric small { display: block; font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+    .metric strong { display: block; font-size: var(--text-sm); line-height: 1.35; }
+    .destination-note { font-size: var(--text-sm); color: var(--color-text-muted); }
+    .reminder-card { padding: 16px; }
+    .reminder-card h4 { font-size: var(--text-sm); margin-bottom: 8px; }
+    .reminder-card p { font-size: var(--text-sm); color: var(--color-text-muted); }
+    .field { display: grid; gap: 8px; }
     .field label, .group-label { font-size: var(--text-sm); font-weight: 800; }
-    .field input, .field textarea, .field select {
-      width: 100%; min-height: 48px; padding: 0 var(--space-4); background: var(--color-surface-2); color: var(--color-text);
+    .field input, .field select, .field textarea {
+      width: 100%; min-height: 48px; padding: 0 14px; background: var(--color-surface-2); color: var(--color-text);
       border: 1px solid var(--color-border); border-radius: var(--radius-lg);
     }
-    .field textarea { min-height: 110px; padding: var(--space-4); resize: vertical; }
-    .hint { font-size: var(--text-xs); color: var(--color-text-faint); }
-    .option-grid { display: grid; gap: var(--space-3); }
-    .pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-    .choice-pill {
-      position: relative;
-    }
+    .field textarea { min-height: 110px; padding: 14px; resize: vertical; }
+    .hint { color: var(--color-text-faint); font-size: var(--text-xs); }
+    .choice-pill { position: relative; }
     .choice-pill input { position: absolute; opacity: 0; pointer-events: none; }
     .choice-pill span {
-      min-height: 42px; display: inline-flex; align-items: center; padding: 0 var(--space-4); border-radius: var(--radius-full);
-      background: var(--color-surface-2); border: 1px solid var(--color-border); font-size: var(--text-sm); font-weight: 700; transition: all var(--transition-interactive);
+      min-height: 42px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: var(--radius-full);
+      background: var(--color-surface-2); border: 1px solid var(--color-border); font-size: var(--text-sm); font-weight: 700; transition: all var(--transition);
     }
-    .choice-pill input:checked + span {
-      background: var(--color-primary); color: white; border-color: var(--color-primary); box-shadow: var(--shadow-sm);
-    }
-    .rank-grid { display: grid; gap: var(--space-3); }
-    .rank-row {
-      display: grid; grid-template-columns: 88px 1fr; gap: var(--space-3); align-items: center;
-    }
+    .choice-pill input:checked + span { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    .rank-grid { display: grid; gap: 10px; }
+    .rank-row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; }
     .rank-chip {
-      min-height: 44px; border-radius: var(--radius-full); background: var(--color-primary-highlight); color: var(--color-primary-hover);
-      display: inline-flex; align-items: center; justify-content: center; font-size: var(--text-sm); font-weight: 800;
+      min-height: 44px; display: grid; place-items: center; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-primary-hover);
+      font-size: var(--text-sm); font-weight: 800;
     }
-    .sidebar-stack { display: grid; gap: var(--space-5); position: sticky; top: var(--space-6); }
-    .scoreboard ul { list-style: none; display: grid; gap: var(--space-3); }
-    .scoreboard li {
-      display: flex; justify-content: space-between; gap: var(--space-3); align-items: center; padding: var(--space-4);
-      border-radius: var(--radius-lg); background: var(--color-surface-2); border: 1px solid var(--color-divider);
+    .toolbar { display: flex; gap: 10px; flex-wrap: wrap; }
+    .ghost-btn, .secondary-btn, .primary-btn {
+      min-height: 46px; padding: 0 16px; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 700; transition: all var(--transition);
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     }
-    .scoreboard strong { font-size: var(--text-sm); }
-    .scoreboard span { font-size: var(--text-xs); color: var(--color-text-muted); }
-    .checklist { display: grid; gap: var(--space-3); }
-    .checklist-item {
-      display: flex; gap: var(--space-3); align-items: start; padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-lg); border: 1px solid var(--color-divider);
+    .ghost-btn { background: var(--color-surface-2); border: 1px solid var(--color-border); color: var(--color-text); }
+    .secondary-btn { background: var(--color-primary-soft); color: var(--color-primary-hover); }
+    .primary-btn { background: var(--color-primary); color: white; box-shadow: var(--shadow-sm); }
+    .primary-btn:hover { background: var(--color-primary-hover); }
+    .ghost-btn:hover, .secondary-btn:hover { filter: brightness(.99); }
+    .preview-shell { padding: 16px; }
+    .preview-shell pre {
+      white-space: pre-wrap; word-break: break-word; max-height: 300px; overflow: auto; font-size: 12px; color: var(--color-text-muted);
+      line-height: 1.45;
     }
-    .dot {
-      width: 11px; height: 11px; border-radius: 50%; background: var(--color-accent); margin-top: 0.35rem; flex: 0 0 auto;
+    .submission-banner {
+      padding: 14px 16px; border-radius: var(--radius-lg); background: var(--color-primary-soft); color: var(--color-primary-hover); font-size: var(--text-sm); font-weight: 700;
+      margin-bottom: var(--space-4);
     }
-    .results-panel pre {
-      white-space: pre-wrap; word-break: break-word; font-size: var(--text-xs); color: var(--color-text-muted);
-      padding: var(--space-4); background: var(--color-surface-2); border-radius: var(--radius-lg); border: 1px solid var(--color-divider); max-height: 320px; overflow: auto;
-    }
-    .footer-note { margin-top: var(--space-6); color: var(--color-text-faint); font-size: var(--text-xs); }
+    .footer-note { margin-top: 12px; color: var(--color-text-faint); font-size: var(--text-xs); }
     @media (max-width: 1100px) {
-      .hero, .layout { grid-template-columns: 1fr; }
-      .sidebar-stack { position: static; }
-      .destination-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid, .content-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 720px) {
-      .app { width: min(100% - 1rem, 100%); }
-      .topbar, .section-head, .destination-top, .hero-stats, .toolbar { flex-direction: column; align-items: stretch; }
-      .hero-copy, .summary-card, .section { padding: var(--space-5); }
-      .destination-grid { grid-template-columns: 1fr; }
+      .app { width: min(100% - 16px, 100%); }
+      .topbar, .toolbar, .section-head, .destination-head, .inline-actions { flex-direction: column; align-items: stretch; }
+      .hero-copy, .summary-card, .section { padding: 18px; }
+      .hero-stats, .metrics-grid { grid-template-columns: 1fr; }
       .rank-row { grid-template-columns: 1fr; }
     }
   </style>
@@ -230,115 +198,111 @@
     <header class="topbar">
       <div class="brand">
         <div class="logo" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-label="Holiday selector logo">
-            <path d="M5 16c3.5 0 5.5-5 9-5 2.7 0 4.1 1.7 5 5"/>
-            <path d="M3 19h18"/>
-            <path d="M8 9l2-4 2 4"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 16c3.5 0 5.5-5 9-5 2.7 0 4.1 1.7 5 5"></path>
+            <path d="M3 19h18"></path>
+            <path d="M8 9l2-4 2 4"></path>
           </svg>
         </div>
-        <div class="brand-copy">
-          <h1>Lads Holiday Selector</h1>
-          <p>Luxury-leaning city break vote with concrete cost bands, export, and email draft built in.</p>
+        <div>
+          <h1>Princess Holiday Selector</h1>
+          <p>Shortlist the best glam getaway, then send your response by email.</p>
         </div>
       </div>
       <div class="toolbar">
-        <button class="ghost-btn" type="button" data-theme-toggle aria-label="Switch theme">Theme</button>
-        <button class="secondary-btn" type="button" id="downloadJsonBtn">Export JSON</button>
-        <button class="primary-btn" type="button" id="emailBtn">Submit by email</button>
+        <button class="ghost-btn" type="button" data-theme-toggle>Theme</button>
+        <button class="secondary-btn" type="button" id="previewBtnTop">Preview response</button>
+        <button class="primary-btn" type="button" id="submitTopBtn">Submit via Outlook / Email</button>
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero-grid">
       <div class="panel hero-copy">
-        <div class="eyebrow">Autumn vote · 4 nights · early October</div>
-        <h2>Pick the best lads trip by comparing dates, budget, and destination.</h2>
-        <p>The purpose of this app is simple: help the group align on which city works best for everyone based on availability, spend, and overall vibe. Once I review everyone’s responses, I’ll choose the strongest option and build the final itinerary around it.</p>
-        <div class="checklist" style="margin: 1.5rem 0 1.75rem;">
-          <div class="checklist-item"><span class="dot"></span><div><strong>Step 1: Review the options</strong><p class="hint">Check the four city cards below and look at the weather, cost range, and nightlife angle.</p></div></div>
-          <div class="checklist-item"><span class="dot"></span><div><strong>Step 2: Fill in the form</strong><p class="hint">Choose every date window you can do, your budget band, and your top 3 destination ranking.</p></div></div>
-          <div class="checklist-item"><span class="dot"></span><div><strong>Step 3: Press Submit by email</strong><p class="hint">This opens an email draft to me with your answers already filled in. You must then press send in your mail app for me to receive it.</p></div></div>
+        <div class="eyebrow">4 nights · early October · group decision</div>
+        <h2>Vote on the prettiest trip that still works for everyone.</h2>
+        <p>The purpose of this page is to help the group align on the best destination based on dates, cost, weather, vibe, and iconic picture potential. Once everyone sends their response, the final trip and itinerary can be built around the strongest option.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><strong>Review the options</strong><p>Check the city cards below and compare weather, cost range, and nightlife profile.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div><strong>Fill in your response</strong><p>Select the dates you can do, your budget band, and your top 3 city ranking.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div><strong>Press submit, then send the email</strong><p>When you click submit, your email app or Outlook draft should open with your answers already populated. You must press send for the response to reach me.</p></div></div>
         </div>
         <div class="hero-stats">
-          <div class="stat"><strong>4</strong><span>Options locked</span></div>
-          <div class="stat"><strong>3</strong><span>Date windows to vote on</span></div>
+          <div class="stat"><strong>4</strong><span>City options</span></div>
+          <div class="stat"><strong>3</strong><span>Date windows</span></div>
           <div class="stat"><strong>Flight + hotel + spend</strong><span>Cost bands included</span></div>
         </div>
       </div>
+
       <div class="panel summary-card">
-        <div>
-          <h3>Destination lens</h3>
-          <div class="summary-list">
-            <div class="summary-item"><small>Warmest all-rounder</small><strong>Athens</strong></div>
-            <div class="summary-item"><small>Best overall polish</small><strong>Lisbon</strong></div>
-            <div class="summary-item"><small>Biggest value wildcard</small><strong>Istanbul / Tirana</strong></div>
-          </div>
+        <h3>Quick positioning</h3>
+        <div class="summary-list">
+          <div class="summary-item"><small>Warmest overall</small><strong>Athens</strong></div>
+          <div class="summary-item"><small>Most polished trip</small><strong>Lisbon</strong></div>
+          <div class="summary-item"><small>Most experience for spend</small><strong>Istanbul</strong></div>
+          <div class="summary-item"><small>Cheapest wildcard</small><strong>Tirana</strong></div>
         </div>
-        <p class="hint">This version is decision-ready: each card now shows a rough 4-night cost band built from flight signals, hotel pricing, and estimated on-trip spend.</p>
+        <p>Use this page to choose the winner, but now with a more glam, pink, princess-coded shortlist energy.</p>
       </div>
     </section>
 
-    <div class="layout">
+    <div class="content-grid">
       <main class="panel section">
         <div class="section-head">
           <div>
             <h3>Holiday options</h3>
-            <p>These are framed as premium-value autumn city breaks, with warmth, nightlife, food scene, and holiday feel all weighted in. Cost bands below are for 4 nights per person based on live flight examples, current hotel pricing references, and moderate daily spend assumptions.</p>
+            <p>All estimates below are rough 4-night per-person ranges based on live flight examples, hotel references, and moderate daily spend assumptions.</p>
           </div>
         </div>
         <div class="destinations" id="destinationCards"></div>
       </main>
 
       <aside class="sidebar-stack">
-        <section class="panel section scoreboard">
+        <section class="panel section">
           <div class="section-head">
             <div>
-              <h3>Cheat sheet</h3>
-              <p>The key thing is pressing submit at the end.</p>
+              <h3>Important</h3>
+              <p>The final step is sending the email.</p>
             </div>
           </div>
-          <ul>
-            <li><div><strong>Athens</strong><span>Warmest + best balance</span></div><strong>23°C</strong></li>
-            <li><div><strong>Lisbon</strong><span>Most polished overall</span></div><strong>23°C</strong></li>
-            <li><div><strong>Istanbul</strong><span>Best scale for spend</span></div><strong>18–20°C</strong></li>
-            <li><div><strong>Tirana</strong><span>Cheapest wildcard</span></div><strong>18–23°C</strong></li>
-          </ul>
+          <div class="reminder-card">
+            <h4>How submission works</h4>
+            <p>After you finish the form, click <strong>Submit via Outlook / Email</strong>. A draft opens with your response already filled in. You still need to press <strong>send</strong> in Outlook or your email app for it to be delivered.</p>
+          </div>
         </section>
 
         <section class="panel section">
           <div class="section-head">
             <div>
-              <h3>Quick reminder</h3>
+              <h3>At a glance</h3>
+              <p>Princess-mode cheat sheet for the group.</p>
             </div>
           </div>
-          <div class="checklist">
-            <div class="checklist-item"><span class="dot"></span><div><strong>Fill it in fully</strong><p class="hint">Do dates, budget, priority, and your top 3 ranking.</p></div></div>
-            <div class="checklist-item"><span class="dot"></span><div><strong>Press Submit by email</strong><p class="hint">That opens the email draft with your answers already in it.</p></div></div>
-            <div class="checklist-item"><span class="dot"></span><div><strong>Then press send</strong><p class="hint">I only receive your response after you send that draft.</p></div></div>
-          </div>
+          <div class="reminder-card"><h4>Athens</h4><p>Best balance of warmth, nightlife, and holiday feel.</p></div>
+          <div class="reminder-card"><h4>Lisbon</h4><p>Best all-round polish and social vibe.</p></div>
+          <div class="reminder-card"><h4>Istanbul</h4><p>Most scale and energy for the money.</p></div>
+          <div class="reminder-card"><h4>Tirana</h4><p>Cheapest and most offbeat option.</p></div>
         </section>
       </aside>
     </div>
 
-    
-    
-
-    <section class="panel section" style="margin-top: 2rem;">
+    <section class="panel section" style="margin-top: 20px;">
       <div class="section-head">
         <div>
           <h3>Your response</h3>
-          <p>Keep the questions simple so the group actually completes it. The app creates a clean structured output and makes it obvious that the final step is to press Submit by email.</p>
+          <p>Complete the form below, then press submit so your email draft opens with your answers ready to send.</p>
         </div>
       </div>
+      <div class="submission-banner">Submission flow: fill in the form → click Submit via Outlook / Email → your draft opens → press send.</div>
       <form id="plannerForm" class="form-grid">
         <div class="field">
           <label for="name">Your name</label>
-          <input id="name" name="name" type="text" placeholder="e.g. Mo" required />
+          <input id="name" type="text" placeholder="e.g. Mo" required>
         </div>
 
         <div class="field">
           <label for="email">Your email</label>
-          <input id="email" name="email" type="email" placeholder="e.g. mate@email.com" />
-          <p class="hint">Optional, but useful if replies get forwarded around.</p>
+          <input id="email" type="email" placeholder="e.g. mate@email.com">
+          <p class="hint">Optional, but useful if replies are forwarded around.</p>
         </div>
 
         <div class="field">
@@ -363,30 +327,31 @@
             <div class="rank-row"><div class="rank-chip">2nd pick</div><select id="rank2" required></select></div>
             <div class="rank-row"><div class="rank-chip">3rd pick</div><select id="rank3" required></select></div>
           </div>
-          <p class="hint">Pick three different cities. The app will flag duplicates.</p>
+          <p class="hint">Choose three different cities.</p>
         </div>
 
         <div class="field">
-          <label for="notes">Notes / constraints</label>
-          <textarea id="notes" name="notes" placeholder="Any hard no-go dates, hotel standards, airport preferences, or vibe notes?"></textarea>
+          <label for="notes">Notes or constraints</label>
+          <textarea id="notes" placeholder="Any date clashes, room standards, flight constraints, or vibe notes?"></textarea>
         </div>
 
         <div class="toolbar">
           <button class="secondary-btn" type="button" id="previewBtn">Preview response</button>
+          <button class="primary-btn" type="button" id="submitBtn">Submit via Outlook / Email</button>
           <button class="ghost-btn" type="reset" id="resetBtn">Reset</button>
         </div>
       </form>
     </section>
 
-    <section class="panel section results-panel" style="margin-top: 2rem;">
+    <section class="panel section" style="margin-top: 20px;">
       <div class="section-head">
         <div>
           <h3>Submission preview</h3>
-          <p>Use this as the exact payload that gets emailed or exported.</p>
+          <p>This is the exact response that gets inserted into the email draft.</p>
         </div>
       </div>
-      <pre id="previewOutput">Fill the form and click “Preview response”.</pre>
-      <p class="footer-note">Submit by email opens the user's default mail app using mailto and prepares an email to you with their answers. This works as long as the recipient email in the file is set to your real address and the user has a mail app configured on their device.</p>
+      <div class="preview-shell"><pre id="previewOutput">Fill the form, then click Preview response or Submit via Outlook / Email.</pre></div>
+      <p class="footer-note">If Outlook or your email app does not open automatically, copy this preview and send it manually. Submissions are currently addressed to 08uddintm@gmail.com.</p>
     </section>
   </div>
 
@@ -394,59 +359,55 @@
     const destinationData = [
       {
         name: 'Athens',
+        highlights: 'Acropolis rooftop drinks, Monastiraki views, late-night dinner spots',
         position: 'Warmest all-rounder',
-        blurb: 'Best balance of heat, nightlife, rooftop energy, and holiday feel. Strongest option if the group still wants sun but is happy with a city base.',
+        blurb: 'Best balance of heat, nightlife, rooftops, and holiday feel if the group still wants sun without doing a pure beach resort.',
         weather: 'Around 23°C',
         cost: '£520–£880 pp',
-        flights: 'Return flights often surface from about £39–£94, with broader averages much higher depending on timing.',
-        hotel: 'Central double rooms often average around £168–£205 per night; split between two for 4 nights.',
-        spend: 'Allow roughly £55–£95 per day for food, drinks, transport, and light activities.',
-        nightlife: 'Strong',
-        vibe: 'Warmest + best balance',
-        tags: ['Heat certainty', 'Rooftop bars', 'Beach add-ons'],
-        notes: 'Use Athens if you want the safest middle ground between sun, cost, and city energy.'
+        flights: 'Flights: often from roughly £39–£94 at the low end.',
+        hotel: 'Hotels: central double rooms often around £168–£205 a night.',
+        spend: 'Spend: roughly £55–£95 a day.',
+        tags: ['Warmest', 'Best balance', 'Rooftops'],
+        note: 'Good default if you want the safest all-round pick.'
       },
       {
         name: 'Lisbon',
+        highlights: 'Sunset miradouros, tram rides, rooftop bars and riverside scenes',
         position: 'Best overall polish',
-        blurb: 'Social, stylish, and easy to sell to a mixed group. Feels elevated without Ibiza pricing and still works well in early October.',
+        blurb: 'Stylish, social, and easy to sell to the whole group. Still warm enough in early October and feels premium without Ibiza-level pricing.',
         weather: 'Around 23°C',
         cost: '£560–£950 pp',
-        flights: 'London return fares commonly show from about £50–£115, with some higher airline pricing around £165+.',
-        hotel: 'Useful 3-star to 4-star baselines run about £132–£190 per night for a double room.',
-        spend: 'Allow roughly £60–£100 per day for meals, drinks, taxis, and going out.',
-        nightlife: 'Strong',
-        vibe: 'Most polished',
-        tags: ['Best all-round vibe', 'Food scene', 'Coast access'],
-        notes: 'Use Lisbon if the group wants a premium-feeling trip with broad appeal and strong nightlife.'
+        flights: 'Flights: commonly from around £50–£115.',
+        hotel: 'Hotels: useful 3–4 star baselines around £132–£190 a night.',
+        spend: 'Spend: roughly £60–£100 a day.',
+        tags: ['Most polished', 'Food scene', 'Strong nightlife'],
+        note: 'Best for broad appeal and overall vibe.'
       },
       {
         name: 'Istanbul',
+        highlights: 'Bosphorus rooftops, Galata nights, grand city skyline moments',
         position: 'Biggest experience',
-        blurb: 'Massive city energy, rooftops, food, and value. Less beachy, but excellent if the group wants maximum experience for the money.',
+        blurb: 'Huge city energy, rooftop bars, food, and value. Less beachy, but very strong if the group wants maximum experience for the spend.',
         weather: '18–20°C',
         cost: '£500–£900 pp',
-        flights: 'Round trips range widely, with typical examples around £76–£249 depending on carrier and timing.',
-        hotel: 'Hotel references range from roughly £54 average market pricing to about £118 for 4-star level.',
-        spend: 'Allow roughly £45–£85 per day for food, drinks, taxis, and nightlife.',
-        nightlife: 'Very strong',
-        vibe: 'Best scale for spend',
-        tags: ['Big city energy', 'Best value feel', 'Food-heavy trip'],
-        notes: 'Use Istanbul if price-to-experience ratio matters more than guaranteed heat.'
+        flights: 'Flights: wide range, roughly £76–£249 depending on carrier.',
+        hotel: 'Hotels: broad range, with decent references around £54–£118 a night.',
+        spend: 'Spend: roughly £45–£85 a day.',
+        tags: ['Best scale', 'Food-heavy', 'Value feel'],
+        note: 'Best when experience matters more than heat certainty.'
       },
       {
         name: 'Tirana',
+        highlights: 'Main square energy, nightlife scenes, affordable city-break spots',
         position: 'Cheap wildcard',
-        blurb: 'Affordable, offbeat, and increasingly cool. Good bars and value, but less heat-secure and less classic-holiday than the others.',
+        blurb: 'Affordable and increasingly cool, with good bars and an underrated city-break feel. Not the strongest for classic holiday heat, but cheapest overall.',
         weather: '18–23°C',
         cost: '£420–£760 pp',
-        flights: 'Return flights can show around £30–£43 at the low end, with broader typical pricing around £73–£114+.',
-        hotel: 'Average hotel pricing sits around £52 per night, with 4-star properties around £73 and October often pricier.',
-        spend: 'Allow roughly £35–£70 per day for meals, bars, and local transport.',
-        nightlife: 'Good',
-        vibe: 'Cheapest outsider',
-        tags: ['Cheapest option', 'Offbeat', 'Bars over beach clubs'],
-        notes: 'Use Tirana if the group wants something underrated and budget-efficient rather than obvious.'
+        flights: 'Flights: low-end returns can be very cheap, around £30–£43.',
+        hotel: 'Hotels: averages around £52 a night, with October sometimes higher.',
+        spend: 'Spend: roughly £35–£70 a day.',
+        tags: ['Cheapest', 'Wildcard', 'Offbeat'],
+        note: 'Best if the group wants cheap and different.'
       }
     ];
 
@@ -455,156 +416,130 @@
       'Thu 1 Oct – Mon 5 Oct 2026',
       'Fri 2 Oct – Tue 6 Oct 2026'
     ];
-
-    const budgetBands = ['Under £500', '£500–£700', '£700–£900', '£900–£1,100', 'Money is secondary'];
+    const budgets = ['Under £500', '£500–£700', '£700–£900', '£900–£1,100', 'Money is secondary'];
     const priorities = ['Most sun', 'Best nightlife', 'Best value', 'Best overall vibe', 'Most luxury feel'];
+
     const destinationCards = document.getElementById('destinationCards');
     const dateOptions = document.getElementById('dateOptions');
     const budgetOptions = document.getElementById('budgetOptions');
     const priorityOptions = document.getElementById('priorityOptions');
-    const rankSelects = ['rank1', 'rank2', 'rank3'].map(id => document.getElementById(id));
     const previewOutput = document.getElementById('previewOutput');
-    const form = document.getElementById('plannerForm');
-    const emailBtn = document.getElementById('emailBtn');
-    const downloadJsonBtn = document.getElementById('downloadJsonBtn');
-    const previewBtn = document.getElementById('previewBtn');
-    const resetBtn = document.getElementById('resetBtn');
+    const rankSelects = ['rank1', 'rank2', 'rank3'].map(id => document.getElementById(id));
+    const submitButtons = [document.getElementById('submitBtn'), document.getElementById('submitTopBtn')];
+    const previewButtons = [document.getElementById('previewBtn'), document.getElementById('previewBtnTop')];
     const themeToggle = document.querySelector('[data-theme-toggle]');
 
-    function renderDestinationCards() {
+    function renderCards() {
       destinationCards.innerHTML = destinationData.map(item => `
         <article class="destination-card">
-          <div class="destination-top">
+          <div class="destination-head">
             <div class="destination-title">
               <div class="badge-row"><span class="badge">${item.position}</span></div>
               <h4>${item.name}</h4>
               <p>${item.blurb}</p>
             </div>
-            <div class="mini-badges">
-              ${item.tags.map(tag => `<span class="mini-badge">${tag}</span>`).join('')}
-            </div>
+            <div class="tag-row">${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
           </div>
-          <div class="destination-grid">
+          <div class="metrics-grid">
             <div class="metric"><small>Weather</small><strong>${item.weather}</strong></div>
             <div class="metric"><small>4-night range</small><strong>${item.cost}</strong></div>
-            <div class="metric"><small>Nightlife</small><strong>${item.nightlife}</strong></div>
-            <div class="metric"><small>Identity</small><strong>${item.vibe}</strong></div>
-          </div>
-          <div class="destination-grid">
             <div class="metric"><small>Flights</small><strong>${item.flights}</strong></div>
-            <div class="metric"><small>Hotels</small><strong>${item.hotel}</strong></div>
-            <div class="metric"><small>Daily spend</small><strong>${item.spend}</strong></div>
-            <div class="metric"><small>Read</small><strong>Indicative only</strong></div>
+            <div class="metric"><small>Hotels + spend</small><strong>${item.hotel}<br>${item.spend}</strong></div>
           </div>
-          <p class="destination-notes">${item.notes}</p>
+          <p class="destination-note"><strong>Go for:</strong> ${item.highlights}. <br>${item.note}</p>
         </article>
       `).join('');
     }
 
-    function createPills(target, items, name, type = 'checkbox') {
-      target.innerHTML = items.map((item, index) => `
+    function createPills(target, items, name, type) {
+      target.innerHTML = items.map(item => `
         <label class="choice-pill">
-          <input type="${type}" name="${name}" value="${item}" ${type === 'radio' && index === 0 ? '' : ''}>
+          <input type="${type}" name="${name}" value="${item}">
           <span>${item}</span>
         </label>
       `).join('');
     }
 
-    function populateRanks() {
-      const options = ['<option value="">Select a city</option>']
-        .concat(destinationData.map(item => `<option value="${item.name}">${item.name}</option>`))
-        .join('');
+    function populateSelects() {
+      const options = ['<option value="">Select a city</option>'].concat(destinationData.map(item => `<option value="${item.name}">${item.name}</option>`)).join('');
       rankSelects.forEach(select => select.innerHTML = options);
     }
 
-    function selectedValues(name) {
-      return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(input => input.value);
+    function getChecked(name) {
+      return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
     }
 
-    function getData() {
-      const ranking = rankSelects.map(select => select.value).filter(Boolean);
-      const duplicateRanks = new Set(ranking).size !== ranking.length;
-      return {
+    function collectData() {
+      const data = {
         respondent: document.getElementById('name').value.trim(),
         email: document.getElementById('email').value.trim(),
-        datesAvailable: selectedValues('dates'),
-        budgetBand: selectedValues('budget')[0] || '',
-        topPriority: selectedValues('priority')[0] || '',
+        datesAvailable: getChecked('dates'),
+        budgetBand: getChecked('budget')[0] || '',
+        priority: getChecked('priority')[0] || '',
         ranking: {
           first: document.getElementById('rank1').value,
           second: document.getElementById('rank2').value,
           third: document.getElementById('rank3').value
         },
         notes: document.getElementById('notes').value.trim(),
-        hasDuplicateRanking: duplicateRanks,
-        submittedAt: new Date().toISOString()
+        generatedAt: new Date().toISOString()
       };
+      const ranks = Object.values(data.ranking).filter(Boolean);
+      data.duplicateRanks = new Set(ranks).size !== ranks.length;
+      return data;
     }
 
-    function validateData(data) {
+    function validate(data) {
       if (!data.respondent) return 'Add your name.';
       if (!data.datesAvailable.length) return 'Pick at least one date window.';
       if (!data.budgetBand) return 'Choose a budget band.';
-      if (!data.topPriority) return 'Choose what matters most.';
-      if (!data.ranking.first || !data.ranking.second || !data.ranking.third) return 'Choose a full top 3 ranking.';
-      if (data.hasDuplicateRanking) return 'Your top 3 must be three different cities.';
+      if (!data.priority) return 'Choose what matters most.';
+      if (!data.ranking.first || !data.ranking.second || !data.ranking.third) return 'Choose your top 3 cities.';
+      if (data.duplicateRanks) return 'Your top 3 must be three different cities.';
       return '';
     }
 
-    function renderPreview() {
-      const data = getData();
-      const error = validateData(data);
+    function buildPayload() {
+      const data = collectData();
+      const error = validate(data);
       if (error) {
         previewOutput.textContent = `Validation issue: ${error}`;
         return null;
       }
-      const preview = {
+      const payload = {
         submission_type: 'lads_holiday_vote',
         respondent: data.respondent,
         email: data.email || 'Not provided',
         date_windows: data.datesAvailable,
         budget_band: data.budgetBand,
-        priority: data.topPriority,
+        top_priority: data.priority,
         destination_ranking: data.ranking,
         notes: data.notes || 'None',
-        generated_at: data.submittedAt
+        generated_at: data.generatedAt
       };
-      previewOutput.textContent = JSON.stringify(preview, null, 2);
-      return preview;
+      previewOutput.textContent = JSON.stringify(payload, null, 2);
+      return payload;
     }
 
-    previewBtn.addEventListener('click', () => renderPreview());
-
-    emailBtn.addEventListener('click', () => {
-      const preview = renderPreview();
-      if (!preview) return;
-      const ownerEmail = 'your-email@example.com';
-      const subject = encodeURIComponent(`Lads holiday vote - ${preview.respondent}`);
-      const body = encodeURIComponent(`Holiday vote response\n\n${JSON.stringify(preview, null, 2)}`);
+    function submitByEmail() {
+      const payload = buildPayload();
+      if (!payload) return;
+      const ownerEmail = '08uddintm@gmail.com';
+      const subject = encodeURIComponent(`Lads holiday vote - ${payload.respondent}`);
+      const body = encodeURIComponent(`Hi,\n\nHere is my holiday vote response.\n\n${JSON.stringify(payload, null, 2)}\n\nPlease review this with the rest of the group.\n`);
       window.location.href = `mailto:${ownerEmail}?subject=${subject}&body=${body}`;
-    });
+    }
 
-    downloadJsonBtn.addEventListener('click', () => {
-      const preview = renderPreview();
-      if (!preview) return;
-      const blob = new Blob([JSON.stringify(preview, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${(preview.respondent || 'holiday-vote').toLowerCase().replace(/[^a-z0-9]+/g, '-')}.json`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    });
+    previewButtons.forEach(btn => btn.addEventListener('click', buildPayload));
+    submitButtons.forEach(btn => btn.addEventListener('click', submitByEmail));
 
-    resetBtn.addEventListener('click', () => {
+    document.getElementById('resetBtn').addEventListener('click', () => {
       setTimeout(() => {
-        previewOutput.textContent = 'Fill the form and click “Preview response”.';
+        previewOutput.textContent = 'Fill the form, then click Preview response or Submit via Outlook / Email.';
       }, 0);
     });
 
-    (function setTheme() {
+    (function setupTheme(){
       let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', theme);
       themeToggle.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
@@ -615,11 +550,11 @@
       });
     })();
 
-    renderDestinationCards();
+    renderCards();
     createPills(dateOptions, dates, 'dates', 'checkbox');
-    createPills(budgetOptions, budgetBands, 'budget', 'radio');
+    createPills(budgetOptions, budgets, 'budget', 'radio');
     createPills(priorityOptions, priorities, 'priority', 'radio');
-    populateRanks();
+    populateSelects();
   </script>
 </body>
 </html>
